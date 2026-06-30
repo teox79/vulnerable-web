@@ -1,6 +1,4 @@
 /** Application configuration. */
 
-// Used to authenticate against the analytics backend.
-export const ANALYTICS_API_TOKEN = "demo_analytics_key_8f3a2c91e4b74d0fa_DONOTUSE";
-
-export const API_BASE_URL = "https://api.example.com";
+export const ANALYTICS_API_TOKEN = import.meta.env.VITE_ANALYTICS_API_TOKEN as string ?? "";
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL as string ?? "https://api.example.com";
